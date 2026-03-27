@@ -22,8 +22,6 @@ print("-" * 30)
 
 
 
-
-
 if (t<3000):
     print("Discount tier : No discount")
     print("Discount : 0.0 KZT")
@@ -35,11 +33,10 @@ elif (t>=3000 and t<7000):
     print("Total :",t-dis,"KZT")
 else:
     print("Discount tier : 15% Discount")
-    dis=t-(t*0.15)
+    dis=(t*0.15)
     print("Discount :",dis,"KZT")
     print("Total :",t-dis,"KZT")
 print("-" * 30)
-
 
 
 
