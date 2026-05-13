@@ -1,26 +1,13 @@
-# Test results:
-# test_analyse_twice (tests.test_analyser.TestAnalyser.test_analyse_twice) ... ok
-# test_result_has_required_keys (tests.test_analyser.TestAnalyser.test_result_has_required_keys) ... ok
-# test_result_is_not_empty (tests.test_analyser.TestAnalyser.test_result_is_not_empty) ... ok
-# test_total_students (tests.test_analyser.TestAnalyser.test_total_students) ... ok
-#
-# ----------------------------------------------------------------------
-# Ran 4 tests in 0.001s
-#
-# OK
+
 
 import unittest
 from analytics.analyser import GpaAnalyser  # импортируем класс который тестируем
 
 
 class TestAnalyser(unittest.TestCase):
-    # unittest.TestCase — базовый класс для всех тестов
-    # каждый метод начинающийся с test_ запускается автоматически
 
     def setUp(self):
-        # setUp() запускается ПЕРЕД КАЖДЫМ тестом автоматически
-        # Создаём маленький тестовый набор данных из 5 студентов
-        # Не загружаем CSV — тесты должны работать быстро и независимо
+
         self.sample = [
             {"GPA": "3.8", "sleep_hours": "7", "country": "USA",
              "final_exam_score": "95", "study_hours_per_day": "4"},

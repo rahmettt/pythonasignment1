@@ -1,16 +1,15 @@
-import os  # нужен для проверки файлов и создания папок
+import os
 
 
 class FileManager:
-    # Отвечает ТОЛЬКО за: проверку CSV файла и создание папки output/
+
 
     def __init__(self, filename):
-        # сохраняем имя файла внутри объекта
+
         self.filename = filename
 
     def check_file(self):
-        # Проверяет существует ли файл на диске
-        # Возвращает True если есть, False если нет
+
         print("Checking file...")
         if os.path.exists(self.filename):
             print(f"File found: {self.filename}")
@@ -20,7 +19,7 @@ class FileManager:
             return False
 
     def create_output_folder(self, folder='output'):
-        # Создаёт папку output/ если её ещё нет
+
         print("Checking output folder...")
         if not os.path.exists(folder):
             os.makedirs(folder)
